@@ -31,7 +31,7 @@ class UserController extends Controller
 
         auth()->login(User::create($payload));
 
-        return redirect('/')->with('message', 'User created and logged in');
+        return redirect(route('listings.manage'))->with('message', 'User created and logged in');
     }
 
     /**
@@ -81,6 +81,6 @@ class UserController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect('/')->with('message', 'You are now logged in!');
+        return redirect(route('listings.manage'))->with('message', 'You are now logged in!');
     }
 }

@@ -43,7 +43,7 @@ Route::get('/listings/{listing}', [ListingController::class, 'show'])->name('lis
 Route::get('/register', [UserController::class, 'create'])->middleware('guest')->name('users.register');
 
 // Create New User
-Route::post('/users', [UserController::class, 'store'])->name('users.store');
+Route::post('/users/store', [UserController::class, 'store'])->name('users.store');
 
 // Log User Out
 Route::post('/logout', [UserController::class, 'logout'])->middleware('auth')->name('users.logout');
