@@ -2,7 +2,7 @@
     <div class="mx-4">
         <div class="container">
             <div class="flex flex-col items-center justify-center text-center">
-                <img class="w-48 mr-6 mb-6" src="{{ $listing->logo ? asset('storage/' . $listing->logo) : asset('/images/no-image.png') }}" alt="" />
+                <img class="w-48 mr-6 mb-6" src="{{ $listing->logo ? asset('storage/app/public/' . $listing->logo) : asset('/images/no-image.png') }}" alt="Company logo" />
                 <h3 class="text-2xl mb-2">{{ $listing->title }}</h3>
                 <div class="text-xl font-bold mb-4">{{ $listing->company }}</div>
 
@@ -29,7 +29,7 @@
                     </div>
                 </div>
 
-                <a href="/" class="btn btn-danger text-light"><i class="fa-solid fa-arrow-left"></i> Back </a>
+                <a href="{{route('listings.manage')}}" class="btn btn-danger text-light"><i class="fa-solid fa-arrow-left"></i> Back </a>
             </div>
         </div>
     </div>

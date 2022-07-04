@@ -80,7 +80,7 @@
                                 <input type="file" class="form-control" name="logo" />
                             </div>
                             <div class="col-6">
-                                <img class="img-thumbnail rounded" src="{{ $listing->logo ? asset('storage/' . $listing->logo) : asset('/images/no-image.png') }}" alt="" />
+                                <img class="img-thumbnail rounded" src="{{ $listing->logo ? asset('storage/app/public/' . $listing->logo) : asset('/images/no-image.png') }}" alt="Company logo" />
                             </div>
                         </div>
 

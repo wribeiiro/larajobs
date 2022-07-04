@@ -3,7 +3,7 @@
 <div class="card mb-2">
     <div class="row">
         <div class="col col-md-4 d-flex">
-            <img src="{{ $listing->logo ? asset('storage/' . $listing->logo) : asset('/images/no-image.png') }}" class="img-fluid rounded-start align-self-center align-items-center align-items-center" alt="...">
+            <img src="{{ $listing->logo ? asset('storage/app/public/' . $listing->logo) : asset('/images/no-image.png') }}" class="img-fluid rounded-start align-self-center align-items-center align-items-center" alt="Company logo">
         </div>
         <div class="col-md-8">
             <div class="card-body">
