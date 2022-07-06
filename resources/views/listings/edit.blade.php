@@ -15,7 +15,7 @@
                         <input type="text" class="form-control" name="company" value="{{ $listing->company }}" />
 
                         @error('company')
-                            <p class="text-danger mt-1">{{ $message }}</p>
+                        <p class="text-danger mt-1">{{ $message }}</p>
                         @enderror
                     </div>
 
@@ -24,7 +24,19 @@
                         <input type="text" class="form-control" name="title" placeholder="Example: Senior Laravel Developer" value="{{ $listing->title }}" />
 
                         @error('title')
-                            <p class="text-danger mt-1">{{ $message }}</p>
+                        <p class="text-danger mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div class="mt-3">
+                        <label for="level" class="control-label">Job Level</label>
+                        <select class="form-select" name="level">
+                            <option selected value="beginner">beginner</option>
+                            <option value="middle">middle</option>
+                            <option value="Experient">Experient</option>
+                        </select>
+                        @error('level')
+                        <p class="text-danger mt-1">{{ $message }}</p>
                         @enderror
                     </div>
 
@@ -33,7 +45,7 @@
                         <input type="text" class="form-control" name="location" placeholder="Example: Remote, Boston MA, etc" value="{{ $listing->location }}" />
 
                         @error('location')
-                            <p class="text-danger mt-1">{{ $message }}</p>
+                        <p class="text-danger mt-1">{{ $message }}</p>
                         @enderror
                     </div>
 
@@ -44,7 +56,7 @@
                         <input type="text" class="form-control" name="email" value="{{ $listing->email }}" />
 
                         @error('email')
-                            <p class="text-danger mt-1">{{ $message }}</p>
+                        <p class="text-danger mt-1">{{ $message }}</p>
                         @enderror
                     </div>
 
@@ -55,7 +67,7 @@
                         <input type="text" class="form-control" name="website" value="{{ $listing->website }}" />
 
                         @error('website')
-                            <p class="text-danger mt-1">{{ $message }}</p>
+                        <p class="text-danger mt-1">{{ $message }}</p>
                         @enderror
                     </div>
 
@@ -66,7 +78,7 @@
                         <input type="text" class="form-control" name="tags" placeholder="Example: Laravel, Backend, Postgres, etc" value="{{ $listing->tags }}" />
 
                         @error('tags')
-                            <p class="text-danger mt-1">{{ $message }}</p>
+                        <p class="text-danger mt-1">{{ $message }}</p>
                         @enderror
                     </div>
 
@@ -85,7 +97,7 @@
                         </div>
 
                         @error('logo')
-                            <p class="text-danger mt-1">{{ $message }}</p>
+                        <p class="text-danger mt-1">{{ $message }}</p>
                         @enderror
                     </div>
 
@@ -96,7 +108,7 @@
                         <textarea class="form-control" name="description" rows="10" placeholder="Include tasks, requirements, salary, etc">{{ $listing->description }}</textarea>
 
                         @error('description')
-                            <p class="text-danger mt-1">{{ $message }}</p>
+                        <p class="text-danger mt-1">{{ $message }}</p>
                         @enderror
                     </div>
 
