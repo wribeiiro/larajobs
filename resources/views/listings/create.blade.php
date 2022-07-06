@@ -13,7 +13,7 @@
                         <label for="company" class="control-label">Company Name</label>
                         <input type="text" class="form-control" name="company" value="{{ old('company') }}" />
                         @error('company')
-                            <p class="text-danger mt-1">{{ $message }}</p>
+                        <p class="text-danger mt-1">{{ $message }}</p>
                         @enderror
                     </div>
 
@@ -21,7 +21,19 @@
                         <label for="title" class="control-label">Job Title</label>
                         <input type="text" class="form-control" name="title" placeholder="Example: Senior Laravel Developer" value="{{ old('title') }}" />
                         @error('title')
-                            <p class="text-danger mt-1">{{ $message }}</p>
+                        <p class="text-danger mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div class="mt-3">
+                        <label for="level" class="control-label">Job Level</label>
+                        <select class="form-select" name="level">
+                            <option selected value="beginner">beginner</option>
+                            <option value="middle">middle</option>
+                            <option value="Experient">Experient</option>
+                        </select>
+                        @error('level')
+                        <p class="text-danger mt-1">{{ $message }}</p>
                         @enderror
                     </div>
 
@@ -29,7 +41,7 @@
                         <label for="location" class="control-label">Job Location</label>
                         <input type="text" class="form-control" name="location" placeholder="Example: Remote, Boston MA, etc" value="{{ old('location') }}" />
                         @error('location')
-                            <p class="text-danger mt-1">{{ $message }}</p>
+                        <p class="text-danger mt-1">{{ $message }}</p>
                         @enderror
                     </div>
 
@@ -39,7 +51,7 @@
                         </label>
                         <input type="text" class="form-control" name="email" value="{{ old('email') }}" />
                         @error('email')
-                            <p class="text-danger mt-1">{{ $message }}</p>
+                        <p class="text-danger mt-1">{{ $message }}</p>
                         @enderror
                     </div>
 
@@ -49,7 +61,7 @@
                         </label>
                         <input type="text" class="form-control" name="website" value="{{ old('website') }}" />
                         @error('website')
-                            <p class="text-danger mt-1">{{ $message }}</p>
+                        <p class="text-danger mt-1">{{ $message }}</p>
                         @enderror
                     </div>
 
@@ -59,7 +71,7 @@
                         </label>
                         <input type="text" class="form-control" name="tags" placeholder="Example: Laravel, Backend, Postgres, etc" value="{{ old('tags') }}" />
                         @error('tags')
-                            <p class="text-danger mt-1">{{ $message }}</p>
+                        <p class="text-danger mt-1">{{ $message }}</p>
                         @enderror
                     </div>
 
@@ -69,7 +81,7 @@
                         </label>
                         <input type="file" class="form-control" name="logo" />
                         @error('logo')
-                            <p class="text-danger mt-1">{{ $message }}</p>
+                        <p class="text-danger mt-1">{{ $message }}</p>
                         @enderror
                     </div>
 
@@ -79,7 +91,7 @@
                         </label>
                         <textarea class="form-control" name="description" rows="10" placeholder="Include tasks, requirements, salary, etc">{{ old('description') }}</textarea>
                         @error('description')
-                            <p class="text-danger mt-1">{{ $message }}</p>
+                        <p class="text-danger mt-1">{{ $message }}</p>
                         @enderror
                     </div>
 
