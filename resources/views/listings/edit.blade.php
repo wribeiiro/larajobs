@@ -31,11 +31,23 @@
                     <div class="mt-3">
                         <label for="level" class="control-label">Job Level</label>
                         <select class="form-select" name="level">
-                            <option selected value="beginner">beginner</option>
-                            <option value="middle">middle</option>
-                            <option value="Experient">Experient</option>
+                            <option  value="beginner" @if ($listing->level === 'beginner') selected @endif >Beginner</option>
+                            <option  value="middle" @if ($listing->level === 'middle') selected @endif >Middle</option>
+                            <option  value="Experient" @if ($listing->level === 'Experient') selected @endif >Experient</option>
                         </select>
                         @error('level')
+                        <p class="text-danger mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div class="mt-3">
+                        <label for="level" class="control-label">Contract</label>
+                        <select class="form-select" name="contract">
+                            <option  value="pj" @if ($listing->contract === 'pj') selected @endif >CLT</option>
+                            <option  value="clt" @if ($listing->contract === 'clt') selected @endif >PJ</option>
+                            <option  value="trainee" @if ($listing->contract === 'trainee') selected @endif >Estágio</option>
+                        </select>
+                        @error('contract')
                         <p class="text-danger mt-1">{{ $message }}</p>
                         @enderror
                     </div>

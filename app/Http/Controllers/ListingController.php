@@ -38,7 +38,8 @@ class ListingController extends Controller
             'email' => ['required', 'email'],
             'tags' => 'required',
             'description' => 'required',
-            'level' => 'required'
+            'level' => 'required',
+            'contract' => 'required'
         ]);
 
         if ($request->hasFile('logo')) {
@@ -75,7 +76,8 @@ class ListingController extends Controller
             'email' => ['required', 'email'],
             'tags' => 'required',
             'description' => 'required',
-            'level' => 'required'
+            'level' => 'required',
+            'contract' => 'required'
         ]);
 
         if ($request->hasFile('logo')) {

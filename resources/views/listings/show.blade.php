@@ -7,8 +7,11 @@
                 <div class="text-xl font-bold mb-4">{{ $listing->company }}</div>
                 <div class="text-lg my-4"><i class="fa-solid fa-location-dot"></i> {{ $listing->location }}</div>
                 <div class="justify-content-center mb-2">
-                    <span class="badge bg-secondary">
+                    <span class="badge bg-secondary text-uppercase">
                         <a class="text-decoration-none text-light" href="#!"> {{ $listing->level }}</a>
+                    </span>
+                    <span class="badge bg-secondary text-uppercase">
+                        <a class="text-decoration-none text-light" href="#!"> {{ $listing->contract }}</a>
                     </span>
                 </div>
                 <div class="border border-gray-200 w-full mb-6"></div>
