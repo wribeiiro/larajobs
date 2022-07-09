@@ -38,6 +38,18 @@
                     </div>
 
                     <div class="mt-3">
+                        <label for="level" class="control-label">Contract</label>
+                        <select class="form-select" name="contract">
+                            <option selected value="pj">CLT</option>
+                            <option value="clt">PJ</option>
+                            <option value="trainee">Estágio</option>
+                        </select>
+                        @error('level')
+                        <p class="text-danger mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div class="mt-3">
                         <label for="location" class="control-label">Job Location</label>
                         <input type="text" class="form-control" name="location" placeholder="Example: Remote, Boston MA, etc" value="{{ old('location') }}" />
                         @error('location')
